@@ -11,4 +11,9 @@ class CertificationList extends Model
         'code',
         'is_active'
     ];
+
+
+    public function daftarpeserta(){
+        return $this->hasOne(daftarpeserta::class);
+    }
 }

@@ -14,4 +14,8 @@ class daftarpeserta extends Model
         'alamat',
         'surat_image',
     ];
+
+    public function CertificationList(){
+        return $this->belongsTo(CertificationList::class);
+    }
 }
