@@ -15,11 +15,15 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use UnitEnum;
 
 class CertificationListResource extends Resource
 {
     protected static ?string $model = CertificationList::class;
-    protected static ?string $navigationLabel = "Certification Management";
+    protected static ?string $navigationLabel = "Certification List";
+
+
+    protected static string|UnitEnum|null $navigationGroup= "Certification Management";
 
     protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-clipboard-document-list';
     protected static string|BackedEnum|null $activeNavigationIcon = 'heroicon-s-clipboard-document-list';
