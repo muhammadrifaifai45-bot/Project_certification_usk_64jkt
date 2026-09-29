@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('daftar_sertifikasis', function (Blueprint $table) {
+        Schema::create('certification_lists', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('ListSertifikasi')->constrained()->cascadeOnDelete();
-            $table->string('NamaSertifikasi');
+            $table->string('daftar_sertifikasi');
+            $table->string('code');
             $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('daftar_sertifikasis');
+        Schema::dropIfExists('certification_lists');
     }
 };
