@@ -18,4 +18,8 @@ class daftarpeserta extends Model
     public function CertificationList(){
         return $this->belongsTo(CertificationList::class);
     }
+    
+    public function CertificationCode(){
+        return $this->hasOne(CertificationCode::class);
+    }
 }
