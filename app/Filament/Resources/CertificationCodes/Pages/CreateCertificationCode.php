@@ -9,3 +9,7 @@ class CreateCertificationCode extends CreateRecord
 {
     protected static string $resource = CertificationCodeResource::class;
 }
+
+// protected function  insialisasicode(array $code):array {
+    
+// }
