@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\CertificationCodes\Schemas;
 
 use App\Models\daftarpeserta;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Utilities\Set;
@@ -15,6 +16,7 @@ class CertificationCodeForm
         return $schema
             ->components([
                 Select::make('daftarpeserta_id')
+                    ->label('Pilih nama peserta yang telah terdaftar')
                     ->required()
                     ->relationship('daftarpeserta', 'nama_peserta')
                     ->searchable()
@@ -34,18 +36,26 @@ class CertificationCodeForm
                 TextInput::make('nik')
                     ->label('Nik peserta')
                     ->disabled()
-                    ->required(),
+                    ->dehydrated(),
                 TextInput::make('gender')
                     ->label('Gender/Jenis Kelamin')
                     ->disabled()
-                    ->required(),
+                    ->dehydrated(),
                 TextInput::make('alamat')
                 ->label('Alamat peserta')
                 ->disabled()
+                ->dehydrated(),
+                FileUpload::make('surat_image')
+                ->label('Dokumen Pendukung')
+                ->image()
+                ->disabled()
+                ->dehydrated()
                 ->required(),
 
+
                 TextInput::make('certification_code')
-                    ->required(),
+                    ->disabled()
+                    ->readonly(),
                 Select::make('status')
                     ->options([
                         'Antrian' => 'Antrian',

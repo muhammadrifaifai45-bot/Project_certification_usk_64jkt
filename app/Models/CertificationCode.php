@@ -12,8 +12,8 @@ class CertificationCode extends Model
         'status'
     ];
 
-    public function DaftarPeserta(){
-        return $this->belongsTo(daftarpeserta::class);
+    public function daftarPeserta(){
+        return $this->belongsTo(daftarpeserta::class, 'daftarpeserta_id');
     }
     
 }

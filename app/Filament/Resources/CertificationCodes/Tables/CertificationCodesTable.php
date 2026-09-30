@@ -15,7 +15,8 @@ class CertificationCodesTable
     {
         return $table
             ->columns([
-                TextColumn::make('daftarpeserta_id')
+                TextColumn::make('daftarpeserta.nama_peserta')
+                    ->label('Nama Peserta')
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('certification_code')
