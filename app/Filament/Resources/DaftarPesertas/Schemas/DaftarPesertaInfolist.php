@@ -15,7 +15,8 @@ class DaftarPesertaInfolist
             ->components([
                 Section::make('Data Peserta')
                 ->schema([
-                    TextEntry::make('certification_list_id')
+                    TextEntry::make('CertificationList.daftar_sertifikasi')
+                    ->label('certification Code')
                     ->numeric(),
                 TextEntry::make('nama_peserta'),
                 TextEntry::make('nik'),
