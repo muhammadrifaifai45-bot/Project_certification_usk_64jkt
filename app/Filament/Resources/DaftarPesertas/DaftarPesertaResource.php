@@ -22,8 +22,11 @@ class DaftarPesertaResource extends Resource
     protected static ?string $model = DaftarPeserta::class;
     protected static ?string $navigationLabel = "Daftar Peserta";
 
+    protected static ?string $pluralModelLabel = "Daftar Peserta"; 
+
     protected static string|UnitEnum| null $navigationGroup = "Certification Management";
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-identification';
+    protected static string|BackedEnum|null $activeNavigationIcon = 'heroicon-s-identification';
 
     protected static ?string $recordTitleAttribute = 'id';
 
