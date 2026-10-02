@@ -9,9 +9,10 @@ class CertificationCodeInfolist
 {
     public static function configure(Schema $schema): Schema
     {
+
         return $schema
             ->components([
-                TextEntry::make('daftarpeserta_id')
+                TextEntry::make('daftarpeserta.nama_peserta')
                     ->numeric(),
                 TextEntry::make('certification_code'),
                 TextEntry::make('status')
